@@ -69,7 +69,7 @@ int MFVFormat::parseValueToInt(int newValue[]) {
     i++;
   }
 
-  while (message.value[i] != '\0') {
+  while (message.value[i] != '\0' && message.value[i] != ';') {
     if (message.value[i] == '$') {
       i++;
       r++;
@@ -82,10 +82,13 @@ int MFVFormat::parseValueToInt(int newValue[]) {
     i++;
     c++;
   }
+  c++;
+  charValue[r][c] = '\0';
   
   // Assign to newValue variable
   for (int j = 0; j <= r; j++) {
     newValue[j] = atoi(charValue[j]);
+    Serial.println(newValue[j]);
   }
 
   // Return number of data
