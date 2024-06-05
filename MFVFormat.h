@@ -1,5 +1,3 @@
-#include <iostream>
-
 class MFVFormat {
   private:
     struct Message {
