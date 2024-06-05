@@ -88,7 +88,6 @@ int MFVFormat::parseValueToInt(int newValue[]) {
   // Assign to newValue variable
   for (int j = 0; j <= r; j++) {
     newValue[j] = atoi(charValue[j]);
-    Serial.println(newValue[j]);
   }
 
   // Return number of data
