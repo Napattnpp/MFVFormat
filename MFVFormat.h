@@ -69,7 +69,7 @@ int MFVFormat::parseValueToInt(int newValue[]) {
     i++;
   }
 
-  while (message.value[i] != '\0' && message.value[i] != ';') {
+  while (message.value[i] != '\0') {
     if (message.value[i] == '$') {
       i++;
       r++;
@@ -82,7 +82,6 @@ int MFVFormat::parseValueToInt(int newValue[]) {
     i++;
     c++;
   }
-  c++;
   charValue[r][c] = '\0';
   
   // Assign to newValue variable
