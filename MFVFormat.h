@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 class MFVFormat {
   private:
     struct Message {
